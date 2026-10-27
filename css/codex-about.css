@@ -1,0 +1,546 @@
+.about-page {
+  --codex-bg: #0b0f19;
+  --codex-card: #151c2b;
+  --codex-blue: #1e90ff;
+  --codex-cyan: #00c6ff;
+  --codex-white: #ffffff;
+  --codex-muted: #c5cbd5;
+  --codex-black: #000000;
+  --codex-mb: #080b12;
+  margin: 0;
+  min-height: 100vh;
+  background: var(--codex-bg);
+  color: var(--codex-white);
+  font-family: Cambria, Georgia, serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+.about-page *,
+.about-page *::before,
+.about-page *::after {
+  box-sizing: border-box;
+}
+
+.about-page a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.about-page button {
+  font: inherit;
+}
+
+.about-page .about-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 78px;
+  padding: clamp(12px, 1.5vw, 28px);
+  background: var(--codex-mb);
+  border-bottom: 1px solid var(--codex-blue);
+}
+
+.about-page .about-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(12px, 0.5vw, 16px);
+  min-width: 0;
+}
+
+.about-page .about-logo {
+  width: clamp(54px, 5vw, 70px);
+  height: clamp(54px, 5vw, 70px);
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 50px;
+  border: 2px solid var(--codex-cyan);
+}
+
+.about-page .about-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.9;
+}
+
+.about-page .about-brand-name {
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 1000;
+  letter-spacing: 3px;
+}
+
+.about-page .about-brand-subtitle {
+  margin-top: 2px;
+  color: var(--codex-cyan);
+  font-size: clamp(12px, 1.3vw, 18px);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.about-page .about-home-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-height: 40px;
+  padding: 8px 17px;
+  border: 2px solid var(--codex-blue);
+  border-radius: 10px;
+  color: var(--codex-white);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease,
+    border-color 0.5s ease;
+}
+
+.about-page .about-home-link:hover {
+  background: var(--codex-white);
+  border-color: var(--codex-cyan);
+  color: var(--codex-bg);
+}
+
+.about-page .about-main {
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 0 auto;
+  padding: 45px 24px 35px;
+}
+
+.about-page .about-welcome {
+  margin-bottom: 38px;
+  text-align: center;
+}
+
+.about-page .about-eyebrow {
+  margin: 0 0 16px;
+  font-family: "Times New Roman", Times, serif;
+  color: var(--codex-cyan);
+  font-size: clamp(16px, 3vw, 22px);
+  font-weight: 700;
+  letter-spacing: 4px;
+  line-height: 1;
+}
+
+.about-page .about-welcome h1 {
+  margin: 0 0 20px;
+  font-size: clamp(34px, 5vw, 70px);
+  font-weight: 700;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.about-page .about-description {
+  max-width: 670px;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--codex-muted);
+  font-size: clamp(16px, 2.2vw, 20px);
+  line-height: 1.7;
+}
+
+.about-page .codex-aim {
+  margin: 32px 0 0;
+  color: var(--codex-blue);
+  font-family: Cambria, Georgia, serif;
+  font-size: clamp(19px, 3vw, 25px);
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+.about-page .about-accordion-section {
+  width: 100%;
+}
+
+.about-page .about-section-intro {
+  max-width: 700px;
+  margin: 0 auto 28px;
+  color: var(--codex-muted);
+  font-size: clamp(15px, 2vw, 21px);
+  text-align: center;
+}
+
+.about-page .about-accordion-item {
+  width: 100%;
+  margin: 0 0 13px;
+  background: var(--codex-mb);
+  border: 2px solid var(--codex-blue);
+  border-radius: 10px;
+  overflow: hidden;
+  transition:
+    border-color 0.5s ease,
+    background-color 0.5s ease;
+}
+
+.about-page .about-accordion-item:hover {
+  border-color: var(--codex-cyan);
+}
+
+.about-page .about-accordion-heading {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+
+.about-page .about-accordion-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  width: 100%;
+  min-height: 68px;
+  padding: 18px 22px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  color: var(--codex-white);
+  cursor: pointer;
+  font-size: clamp(14px, 2.2vw, 17px);
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.5;
+  text-align: left;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+.about-page .about-accordion-button:hover {
+  background: var(--codex-muted);
+  color: var(--codex-black);
+}
+
+.about-page .about-accordion-button[aria-expanded="true"] {
+  background: rgba(30, 144, 255, 0.1);
+  color: var(--codex-cyan);
+}
+
+.about-page .about-accordion-button:active {
+  outline: 2px solid var(--codex-blue);
+  outline-offset: -4px;
+}
+
+.about-page .about-toggle-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--codex-blue);
+  border-radius: 50%;
+  color: var(--codex-white);
+  font-family: Arial, sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+.about-page .about-accordion-button[aria-expanded="true"] .about-toggle-icon {
+  background: var(--codex-cyan);
+  color: var(--codex-mb);
+}
+
+.about-page .about-accordion-content {
+  padding: 8px 22px 26px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  color: var(--codex-muted);
+  font-size: 15px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+.about-page .about-accordion-content[hidden] {
+  display: none;
+}
+
+.about-page .about-accordion-content p {
+  margin: 13px 0;
+}
+
+.about-page .about-accordion-content p:last-child {
+  margin-bottom: 0;
+}
+
+.about-page .about-accordion-content strong {
+  color: var(--codex-white);
+  font-weight: 700;
+}
+
+.about-page .about-services-list,
+.about-page .about-values-list {
+  margin: 18px 0;
+  padding-left: 23px;
+}
+
+.about-page .about-services-list li,
+.about-page .about-values-list li {
+  margin: 0 0 12px;
+  padding-left: 5px;
+}
+
+.about-page .about-services-list li::marker,
+.about-page .about-values-list li::marker {
+  color: var(--codex-cyan);
+}
+
+.about-page .about-action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  margin-top: 18px;
+  padding: 11px 23px;
+  background: var(--codex-blue);
+  border: 1px solid var(--codex-blue);
+  border-radius: 7px;
+  color: var(--codex-white);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background-color 0.5s ease,
+    border-color 0.5s ease,
+    color 0.5s ease,
+    transform 0.5s ease;
+}
+
+.about-page .about-action-button:hover {
+  background: var(--codex-cyan);
+  border-color: var(--codex-cyan);
+  color: var(--codex-background);
+}
+
+.about-page .about-action-button:active {
+  transform: translateY(1px);
+}
+
+.about-page .about-action-button:active {
+  outline: 2px solid var(--codex-white);
+  outline-offset: 4px;
+}
+
+.about-page .about-footer {
+  width: 100%;
+  background: var(--codex-black);
+  border-top: 1px solid var(--codex-blue);
+  text-align: center;
+}
+
+.about-page .codex-motto {
+  font-size: clamp(18px, 3vw, 22px);
+  color: var(--codex-cyan);
+  font-style: italic;
+  margin-bottom: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.about-page .copyright {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--codex-muted);
+  font-size: clamp(14px, 1.5vw, 20px);
+  line-height: 1.6;
+}
+
+.codex-community {
+  width: 100%;
+  padding: clamp(40px, 7vw, 80px) 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.codex-community-content {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.codex-community h2 {
+  margin: 0 0 18px;
+  color: var(--codex-cyan);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  line-height: 1.2;
+}
+
+.codex-community p {
+  max-width: 650px;
+  margin: 0 auto 28px;
+  color: #e5e7eb;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+.codex-community-button {
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  padding: 14px 24px;
+  border: 3px solid var(--codex-cyan);
+  border-radius: 10px;
+  background: var(--codex-black);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition:
+    background-color 0.5s ease,
+    border-color 0.5s ease,
+    transform 0.5s ease;
+}
+
+.codex-community-button:hover {
+  background: var(--codex-white);
+  border-color: var(--codex-blue);
+  color: var(--codex-black);
+}
+
+.codex-community-button:focus-visible {
+  outline: 3px solid var(--codex-blue);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .codex-community-button {
+    transition: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page .about-main {
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+
+  .about-page .about-welcome {
+    padding-top: 60px;
+  }
+
+  .about-page .about-accordion-button {
+    min-height: 64px;
+    padding: 16px 18px;
+  }
+
+  .about-page .about-accordion-content {
+    padding: 8px 18px 23px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page .about-header {
+    min-height: 70px;
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .about-page .about-logo {
+    width: 37px;
+    height: 37px;
+  }
+
+  .about-page .about-brand {
+    gap: 8px;
+    font-size: 13px;
+  }
+
+  .about-page .about-home-link {
+    min-height: 36px;
+    padding: 7px 11px;
+    font-size: 12px;
+  }
+
+  .about-page .about-main {
+    padding-right: 14px;
+    padding-left: 14px;
+    padding-bottom: 45px;
+  }
+
+  .about-page .about-welcome {
+    padding-top: 46px;
+    padding-bottom: 32px;
+  }
+
+  .about-page .about-eyebrow {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .about-page .about-welcome-description {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .about-page .about-welcome-motto {
+    margin-top: 17px;
+  }
+
+  .about-page .about-section-intro {
+    margin-bottom: 21px;
+    font-size: 14px;
+  }
+
+  .about-page .about-accordion-item {
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+
+  .about-page .about-accordion-button {
+    min-height: 59px;
+    padding: 14px 13px;
+    gap: 10px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+
+  .about-page .about-toggle-icon {
+    width: 27px;
+    height: 27px;
+    font-size: 19px;
+  }
+
+  .about-page .about-accordion-content {
+    padding: 7px 14px 20px;
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .about-page .about-services-list,
+  .about-page .about-values-list {
+    padding-left: 20px;
+  }
+
+  .about-page .about-action-button {
+    width: 100%;
+    min-height: 45px;
+    margin-top: 15px;
+    padding: 11px 14px;
+  }
+
+  .about-page .about-footer {
+    padding: 24px 14px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-page *,
+  .about-page *::before,
+  .about-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
