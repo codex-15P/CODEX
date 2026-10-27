@@ -1,0 +1,309 @@
+.home-page {
+  --codex-bg: #0b0f19;
+  --codex-card: #151c2b;
+  --codex-blue: #1e90ff;
+  --codex-cyan: #00c6ff;
+  --codex-white: #ffffff;
+  --codex-muted: #c5cbd5;
+  --codex-black: #000000;
+  --codex-mb: #080b12;
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--codex-bg);
+  color: var(--codex-white);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  overflow-x: hidden;
+}
+
+.home-page *,
+.home-page *::before,
+.home-page *::after {
+  box-sizing: border-box;
+}
+
+.home-page a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.home-page .home-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 78px;
+  padding: clamp(12px, 1.5vw, 28px);
+  background: var(--codex-mb);
+  border-bottom: 1px solid var(--codex-blue);
+}
+
+.home-page .home-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(12px, 0.5vw, 16px);
+  min-width: 0;
+}
+
+.home-page .home-logo {
+  width: clamp(54px, 5vw, 70px);
+  height: clamp(54px, 5vw, 70px);
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 50px;
+  border: 2px solid var(--codex-cyan);
+}
+
+.home-page .home-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.9;
+}
+
+.home-page .home-brand-name {
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 1000;
+  letter-spacing: 3px;
+}
+
+.home-page .home-brand-subtitle {
+  margin-top: 2px;
+  color: var(--codex-cyan);
+  font-size: clamp(12px, 1.3vw, 18px);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.home-page .menu-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border: 2px solid var(--codex-blue);
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  transition:
+    background-color 0.5s ease,
+    border-color 0.5s ease;
+}
+
+.home-page .menu-toggle span {
+  display: block;
+  width: 23px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--codex-white);
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+
+.home-page .menu-toggle:hover {
+  border-color: var(--codex-white);
+}
+
+.home-page .menu-toggle:active {
+  outline: 2px solid var(--codex-cyan);
+  outline-offset: 3px;
+}
+
+.home-page .main-navigation {
+  position: absolute;
+  top: 78px;
+  right: clamp(16px, 5vw, 60px);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: min(200px, calc(100vw - 32px));
+  padding: 10px;
+  background: var(--codex-bg);
+  border: 1px solid var(--codex-blue);
+  border-radius: 10px;
+}
+
+.home-page .main-navigation[hidden] {
+  display: none;
+}
+
+.home-page .main-navigation a {
+  display: block;
+  padding: 13px 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 6px;
+  color: var(--codex-white);
+  font-size: 16px;
+  text-decoration: none;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+.home-page .main-navigation a:hover,
+.home-page .main-navigation a:focus-visible {
+  background: var(--codex-muted);
+  color: var(--codex-cyan);
+  outline: none;
+}
+
+.home-page .lines {
+  display: block;
+  width: 100%;
+  height: 0;
+  border: 0;
+  border-top: 1px solid var(--codex-cyan);
+  margin: 0;
+}
+
+.home-page .home-main {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 70px 22px;
+}
+
+.home-page .home-introduction {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-page .home-eyebrow {
+  margin: 0 0 22px;
+  font-family: "Times New Roman", Times, serif;
+  color: var(--codex-cyan);
+  font-size: clamp(16px, 3.5vw, 22px);
+  font-weight: 700;
+  letter-spacing: 4px;
+  line-height: 1.8;
+}
+
+.home-page .home-title {
+  margin: 0 0 20px;
+  font-size: clamp(34px, 7vw, 70px);
+  font-weight: 700;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.home-page .home-title span {
+  color: var(--codex-blue);
+  letter-spacing: 5px;
+}
+
+.home-page .home-description {
+  max-width: 650px;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--codex-muted);
+  font-size: clamp(16px, 2.2vw, 20px);
+  line-height: 1.7;
+}
+
+.codex-aim {
+  margin: 32px 0 0;
+  color: var(--codex-blue);
+  font-family: Cambria, Georgia, serif;
+  font-size: clamp(19px, 3vw, 25px);
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+.home-page .home-footer {
+  width: 100%;
+  background: var(--codex-black);
+  border-top: 1px solid var(--codex-blue);
+  text-align: center;
+}
+
+.codex-motto {
+  font-size: clamp(18px, 3vw, 22px);
+  color: var(--codex-cyan);
+  font-style: italic;
+  margin-bottom: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.copyright {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--codex-muted);
+  font-size: clamp(14px, 1.5vw, 20px);
+  line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+  .home-page .home-header {
+    min-height: 70px;
+    padding: 12px 15px;
+  }
+
+  .home-page .home-logo {
+    width: 39px;
+    height: 39px;
+  }
+
+  .home-page .home-brand {
+    gap: 9px;
+  }
+
+  .home-page .home-brand-name {
+    font-size: 15px;
+  }
+
+  .home-page .menu-toggle {
+    width: 42px;
+    height: 42px;
+  }
+
+  .home-page .main-navigation {
+    top: 70px;
+    right: 15px;
+  }
+
+  .home-page .home-main {
+    padding: 60px 20px;
+  }
+
+  .home-page .home-eyebrow {
+    margin-bottom: 18px;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  .home-page .home-title {
+    margin-bottom: 20px;
+  }
+
+  .home-page .home-description {
+    line-height: 1.8;
+  }
+
+  .home-page .codex-motto {
+    margin-top: 25px;
+  }
+
+  .home-page .home-footer {
+    padding: 22px 15px 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page .menu-toggle,
+  .home-page .menu-toggle span,
+  .home-page .main-navigation a {
+    transition: none;
+  }
+}
